@@ -6,26 +6,23 @@ a newer version along with various useful packages
 (see details on the [LCG stacks][lcg_stack]) by setting up an LCG environment:
 
 ```bash
-$ source /cvmfs/sft.cern.ch/lcg/views/setupViews.sh LCG_93 x86_64-slc6-gcc62-opt
+$ source /cvmfs/sft.cern.ch/lcg/views/setupViews.sh LCG_93python3 x86_64-slc6-gcc62-opt
 ```
 
 If you have a computer running MacOS or some Linux distribution, it will have
 come will Python pre-installed. Either way, a simple way to get Python on your 
 computer is to install [Anaconda][anaconda].
 
-{% callout "Python 3?" %}
-You might see material that talks about Python 3. Like a lot of other software, 
+{% callout "Python 2 or 3?" %}
+You might see material that talks about Python 3 or Python 2. Like a lot of other software, 
 Python is regularly updated and groups batches of updates, including bug fixes 
 and new features, into versions. The interesting thing about Python 3 is that 
 it isn’t _backwards compatible_ with Python 2. This means that code that works 
 when run with version 2 of Python may not necessarily work when run with 
-version 3. Python 2 was around for a long time, and so the process of migrating to Python 3 has been slow, which is why so many people talk about it.
+version 3. Python 2 was around for a long time, and so the process of migrating to Python 3 has been slow, which is why so many people talk about it. However the support for Python 2 will soon end, so now everyone is encouraged to use Python 3. That is why in this lesson, we use Python 3.
 
-Indeed, LHCb software is not compatible with Python 3, and so we use Python 2 
-in these lessons. In general, and out in the real world, Python 3 is preferred 
-as it receives the most focus from the people who make Python. If you’re 
-starting a new project, and don’t have to use LHCb software, consider trying to 
-use Python 3. You can install both Python 2 and Python 3 using 
+Note that LHCb software is not (yet) compatible with Python 3, and so we use Python 2 
+in these lessons. We strongly encourage you to always use Python 3 and only switch to Python 2 when you have to (ex: when you need to use LHCb software). You can install both Python 2 and Python 3 using 
 [Anaconda](https://www.anaconda.com/download/).
 {% endcallout %}
 
@@ -38,7 +35,7 @@ Python 2.7.13 (default, Dec  5 2017, 19:29:24)
 [GCC 6.2.0] on linux2
 Type "help", "copyright", "credits" or "license" for more information.
 >>> a = 3.14
->>> print a + 1
+>>> print (a + 1)
 4.14
 >>> a
 3.14
@@ -49,7 +46,7 @@ Woah! What just happened?
 1. We started an _interactive Python session_, also known as a Python _shell_, 
    by executing the `python` command;
 2. We typed a line of code, `a = 3.14`, and hit enter;
-3. We typed another line of code, `print a`, and hit enter;
+3. We typed another line of code, `print (a)`, and hit enter;
 4. The value `3.14` was printed to the terminal.
 
 This interactive session is sometimes called a REPL: a **R**ead **E**valuate 
