@@ -30,24 +30,27 @@ Python is a very user-friendly language. If you’re used to having to compile
 your code, this might seem refreshing:
 
 ```bash
-$ python
-Python 2.7.13 (default, Dec  5 2017, 19:29:24)
-[GCC 6.2.0] on linux2
+$python3
+Python 3.6.3 (default, Dec 19 2017, 22:45:30) 
+[GCC 6.2.0] on linux
 Type "help", "copyright", "credits" or "license" for more information.
 >>> a = 3.14
->>> print (a + 1)
-4.14
+>>> print(a+1.1)
+4.24
 >>> a
 3.14
+
 ```
 
 Woah! What just happened?
 
 1. We started an _interactive Python session_, also known as a Python _shell_, 
-   by executing the `python` command;
+   by executing the `python3` command;
 2. We typed a line of code, `a = 3.14`, and hit enter;
-3. We typed another line of code, `print (a)`, and hit enter;
-4. The value `3.14` was printed to the terminal.
+3. We typed another line of code, `print (a+1.1)`, and hit enter;
+4. The value `4.14` was printed to the terminal.
+5. We type the variable a.
+6. The value of the variable a was printed.
 
 This interactive session is sometimes called a REPL: a **R**ead **E**valuate 
 **P**rint **L**oop. This is just like `bash`, where you type your command, run 
@@ -63,9 +66,8 @@ it’s a great way to experiment. An enhanced version of this session is called
 [IPython][ipython].
 
 ```bash
-$ ipython
-
-Python 2.7.13 (default, Dec  5 2017, 19:29:24)
+$ipython
+Python 3.6.3 (default, Dec 19 2017, 22:45:30) 
 Type "copyright", "credits" or "license" for more information.
 
 IPython 5.4.1 -- An enhanced Interactive Python.
@@ -74,8 +76,9 @@ IPython 5.4.1 -- An enhanced Interactive Python.
 help      -> Python's own help system.
 object?   -> Details about 'object', use 'object??' for extra details.
 
-In [1]: print 1 + 3
+In [1]: print(1 + 3)
 4
+
 ```
 
 There are a few advantages to using `ipython` over `python`:
@@ -131,22 +134,6 @@ information on something, just ask for `help`!
 In [7]: help()
 
 In [8]: help(math)
-```
-
-You can see what names are available to you by using the `dir` method.
-
-```python
-In [9]: dir()
-
-In [10]: __doc__
-'Automatically created module for IPython interactive environment'
-
-In [11]: dir(math)
-['__doc__',
- ...
- 'sin',
- ...
- 'trunc']
 ```
 
 [anaconda]: https://www.anaconda.com/download/
